@@ -1,0 +1,12 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "Shop Stop",
+  "main": "index.js",
+  "engine": "9.8.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ivaylo",
+  "license": "MIT"
+}
