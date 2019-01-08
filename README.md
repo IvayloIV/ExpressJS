@@ -7,3 +7,4 @@
 3. [**Exercise - Web Server and Development Tools**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Exercise-Web_Server_and_Development_Tools)
 4. [**Lab - Persistence-Files and MongoDB**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-Persistence-Files_and_MongoDB)
 5. [**Exercise - Persistence-Files and MongoDB**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Exercise-Persistence-Files_and_MongoDB)
+6. [**Lab - Introduction to Express.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-Introduction_to_Express.js)
