@@ -1,0 +1,26 @@
+<h1>Add New Book</h1>
+
+{{#if errorMessage}}
+    <div id="errBox"><h2 id="errMsg">{{errorMessage}}</h2></div>
+{{else if successMessage}}
+    <div id="succssesBox"><h2 id="succssesMsg">{{successMessage}}</h2></div>
+{{/if}}
+
+<div class="container">
+    <form action="/addBook" method="POST">
+        <label for="bookTitle">Title</label>
+        <input type="text" id="bookTitle" name="bookTitle" value="{{bookTitle}}" placeholder="The title of the book">
+
+        <label for="bookYear">Year</label>
+        <input type="text" id="bookYear" name="bookYear" value="{{bookYear}}" placeholder="Year of release">
+
+        <label for="bookPoster">Poster URL</label>
+        <input type="text" id="bookPoster" name="bookPoster" value="{{bookPoster}}" placeholder="Link to a poster">
+
+        <label for="bookAuthor">Book author</label>
+        <input type="text" id="bookAuthor" name="bookAuthor" value="{{bookAuthor}}" placeholder="Book author">
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
