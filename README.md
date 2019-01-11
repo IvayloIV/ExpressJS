@@ -10,3 +10,4 @@
 6. [**Lab - Introduction to Express.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-Introduction_to_Express.js)
 7. [**Exercise - Introduction to Express.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Exercise-Introduction_to_Express.js)
 8. [**Lab - View Engines**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-View_Engines)
+9. [**Exercise - View Engines**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Exercise-View_Engines)
