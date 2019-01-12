@@ -1,0 +1,28 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "Shop Stop",
+  "main": "index.js",
+  "engine": "9.8.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ivaylo",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "1.4.3",
+    "crypto": "1.0.1",
+    "express": "^4.16.4",
+    "express-session": "1.15.6",
+    "gulp-clean-css": "4.0.0",
+    "gulp-rename": "^1.4.0",
+    "mongoose": "^5.4.2",
+    "multer": "^1.4.1",
+    "multiparty": "^4.2.1",
+    "passport": "0.4.0",
+    "passport-local": "1.0.0",
+    "pug": "2.0.3",
+    "shortid": "^2.2.14"
+  }
+}
