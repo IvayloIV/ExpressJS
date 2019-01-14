@@ -1,0 +1,35 @@
+<h1>Cars</h1>
+<form method="POST" action="/cars/all">
+    <label>
+        <span>Search:</span>
+        <input type="text" name="model" placeholder="Search by model..." value="{{model}}">
+        <input type="submit" value="Submit">
+    </label>
+</form>
+<div class="cars-container">
+    {{#each cars}}
+    <div class="car-container">
+            <section>
+                <a href="/cars/edit/{{_id}}">
+                    <img src="{{imageUrl}}" alt='car-image' />    
+                </a>           
+            </section>
+            <section class="info">
+                <strong>{{model}}</strong>
+                <span class="rent">
+                    <a href="/cars/rent/{{_id}}">RENT</a>
+                </span>
+                <span class="rented">color: 
+                    <strong>{{color}}</strong>
+                </span>
+            </section>
+        </div>
+    {{else}}
+        <div>No available cars!</div>
+    {{/each}}
+</div>
+<div class="pages">
+    {{#each totalPages}}
+        <a href="/cars/{{number}}/all/{{query}}">{{number}}</a>
+    {{/each}}
+</div>

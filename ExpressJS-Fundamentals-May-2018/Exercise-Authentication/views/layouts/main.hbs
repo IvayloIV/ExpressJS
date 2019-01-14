@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RentACar</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="icon" href="/favicon.ico?" />
+</head>
+</body class="preload">
+    {{> header}}
+
+    {{#if message}}
+        <h3>{{message}}</h3>
+    {{/if}}
+    <section id="main-container">
+        <main>
+            {{{body}}}
+        </main>
+    </section>
+    {{> footer}}
+
+    <script>
+        document.onload = function() {
+            document
+                .querySelector('body')
+                .classList
+                .remove('preload');
+        }
+    </script>
+</body>
+</html>

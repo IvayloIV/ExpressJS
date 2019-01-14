@@ -1,0 +1,19 @@
+<header>
+    <nav>
+        <img id="logo" src="/logo.png" alt="logo"/>
+        <ul id="main-nav">
+            <li><a href="/">home</a></li>
+            <li><a href="/cars/1/all">all cars</a></li>
+            <li><a href="/cars/create">add car</a></li>
+            <li><a href="/users/profile/me">profile</a></li>
+        </ul>
+        <ul id="user">
+            {{#if user}}
+                <li><a href="/users/logout">logout</a></li>
+            {{else}}
+                <li><a href="/users/register">register</a></li>
+                <li><a href="/users/login">login</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
