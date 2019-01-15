@@ -13,3 +13,4 @@
 9. [**Exercise - View Engines**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Exercise-View_Engines)
 10. [**Lab - Authentication**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-Authentication)
 11. [**Exercise - Authentication**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Exercise-Authentication)
+12. [**Workshop**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Workshop)
