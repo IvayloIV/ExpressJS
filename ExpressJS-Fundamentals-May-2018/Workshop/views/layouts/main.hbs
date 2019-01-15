@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SoftUni blog</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js.map"></script>
+</head>
+<body>
+    {{> header}}
+
+    {{#if message }}
+        <h2>{{message}}</h2>
+    {{/if}}
+
+    {{{body}}}
+</body>
+{{> footer}}
+</html>
