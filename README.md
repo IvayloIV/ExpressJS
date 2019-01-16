@@ -3,6 +3,7 @@
 ---
 ## <b>ExpressJS Fundamentals - January 2019</b>
 1. [**Lab - Introduction to HTTP and Node.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-January-2019/Lab-Introduction_to_HTTP_and_Node.js)
+2. [**Exercise - Introduction to HTTP and Node.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-January-2019/Exercise-Introduction_to_HTTP_and_Node.js)
 
 ## <b>ExpressJS Fundamentals - May 2018</b>
 1. [**Lab - Introduction to HTTP and Node.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-Introduction_to_HTTP_and_Node.js)
