@@ -1,0 +1,26 @@
+<form method="post" action="/product/create">
+    <h2>Create Product</h2>
+    <div>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="beef">Beef</option>
+            <option value="chicken">Chicken</option>
+            <option value="lamb">Lamb</option>
+        </select>
+    </div>
+    <div>
+        <label for="imageUrl">Image Url</label>
+        <input id="imageUrl" name="imageUrl" type="text" value="{{product.imageUrl}}">
+    </div>
+    <div>
+        <label for="size">Size</label>
+        <input id="size" name="size" type="number" value="{{product.size}}">
+    </div>
+    <div>
+        <strong>Toppings</strong><br>
+        <textarea name="toppings">{{product.toppings}}</textarea>
+    </div>
+    <div>
+        <input type="submit" value="Create" class="button" style="border:0" />
+    </div>
+</form>
