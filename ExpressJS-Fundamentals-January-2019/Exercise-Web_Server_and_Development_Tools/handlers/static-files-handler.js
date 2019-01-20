@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const url = require('url');
 
 let contentTypes = {
     html: 'text/html',
@@ -12,9 +11,7 @@ let contentTypes = {
 };
 
 module.exports = (req, res) => {
-    req.pathname = req.pathname || url.parse(req.url).pathname;
-
-    if (req.pathname.startsWith('/content/') && req.method === 'GET') {
+    if (req.pathname.startsWith('/public/') && req.method === 'GET') {
         let filePath = path.normalize(
             path.join(__dirname, `..${req.pathname}`)
         );
