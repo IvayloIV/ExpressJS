@@ -1,4 +1,4 @@
-const Product = require('../models/Product');
+const apiProduct = require('../api/product');
 
 module.exports = {
     index: async (req, res) => {
@@ -11,7 +11,7 @@ module.exports = {
         }
         
         try {
-            let products = await Product.find({});
+            let products = await apiProduct.getAll();
             for(let product of products) {
                 product.isAdmin = isAdmin;
             }

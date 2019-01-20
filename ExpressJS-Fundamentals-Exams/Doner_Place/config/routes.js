@@ -3,6 +3,7 @@ const restrictedPages = require('./auth');
 
 module.exports = app => {
     app.get('/', controllers.home.index);
+    app.get('/index.html', controllers.home.index);
 
     app.get('/user/register', controllers.user.registerGet);
     app.post('/user/register', controllers.user.registerPost);
