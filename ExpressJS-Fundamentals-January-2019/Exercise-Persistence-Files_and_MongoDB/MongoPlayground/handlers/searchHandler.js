@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 const qs = require('querystring');
 const fs = require('fs');
 const Image = require('../models/Image');
@@ -15,10 +14,6 @@ module.exports = (req, res) => {
 		req.on('end', () => {
 			let body = qs.parse(queryString);
 			let obj = {};
-			// afterDate:"0032-03-31"
-			// beforeDate:"0222-02-22"
-			// Limit:"123"
-			// tagName:"Write tags fsdfsdseparted by ,"
 
 			if (body.afterDate !== '') {
 				obj['dateCreation'] = { $gt: Date.parse(body.afterDate) };
