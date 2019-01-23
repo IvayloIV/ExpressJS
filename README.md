@@ -26,3 +26,4 @@
 ## <b>ExpressJS Fundamentals - Exams</b>
 1. [**Doner Place**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/Doner_Place)
 2. [**SoftUni Wiki**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/SoftUni_Wiki)
+3. [**Mish Mash**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/Mish_Mash)
