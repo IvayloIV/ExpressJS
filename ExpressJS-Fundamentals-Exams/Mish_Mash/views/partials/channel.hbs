@@ -1,0 +1,18 @@
+<div class="channel col mx-3 bg-mishmash rounded py-3">
+    <h6 class="channel-name text-white text-center">{{name}}</h6>
+    <hr class="bg-white hr-2 w-75">
+    <h6 class="channel-name text-white text-center">{{type}} Channel</h6>
+    <hr class="bg-white hr-2 w-75">
+    <h6 class="channel-name text-white text-center">{{followersCount}} Following</h6>
+    <hr class="bg-white hr-2 w-75">
+    {{#if isFollow}}
+    <div class="follow-button-holder d-flex justify-content-center">
+        <a href="follow"><h6 class="text-center text-white">Following</h6></a>
+    </div>
+    {{else}}
+    <div class="follow-button-holder d-flex justify-content-between w-50 mx-auto">
+        <a href="/channel/follow/{{_id}}"><h6 class="text-center text-white">Follow</h6></a>
+        <a href="/channel/details/{{_id}}"><h6 class="text-center text-white">Details</h6></a>
+    </div>
+    {{/if}}
+</div>

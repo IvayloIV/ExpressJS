@@ -1,0 +1,36 @@
+<h4 class="text-mishmash text-center">Welcome, {{currentUser.username}}!</h4>
+<h5 class="text-mishmash">Your channels</h5>
+<hr class="hr-2 bg-mishmash">
+<div class="followed-channels-holder">
+    <div class="channels-row row ">
+        {{#each followedChannel}}
+            {{> channel}}
+        {{else}}
+        <p>No available channel.</p>
+        {{/each}}
+    </div>
+</div>
+<h5 class="mt-4 text-mishmash">Suggested</h5>
+<hr class="bg-mishmash hr-2">
+<div class="suggested-channels-holder">
+    <div class="followed-channels-holder">
+        <div class="channels-row row ">
+            {{#each suggestedChannel}}
+                {{> channel}}
+            {{else}}
+                <p>No available channel.</p>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<h5 class="mt-4 text-mishmash">See Other</h5>
+<hr class="mt-4 bg-mishmash hr-2">
+<div class="other-channels-holder mb-5">
+    <div class="channels-row row ">
+        {{#each seeOther}}
+            {{> channel}}
+        {{else}}
+            <p>No available channel.</p>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-mishmash">
+        <a class="navbar-brand nav-link-white" href="/">Mish Mash</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+            {{#if currentUser}}
+            <ul class="navbar-nav right-side">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-white active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-white active" href="/channel/my">My Channels</a>
+                </li>
+                {{#if isAdmin}}
+                    <li class="nav-item">
+                            <a class="nav-link nav-link-white active" href="/channel/create">Create Channel</a>
+                    </li>
+                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link nav-link-white active" href="/user/logout">Logout</a>
+                </li>
+            </ul>
+            {{else}}
+             <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-white active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-white active" href="/user/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-white active" href="/user/register">Register</a>
+                    </li>
+                </ul>
+            {{/if}}
+        </div>
+    </nav>
+</header>
