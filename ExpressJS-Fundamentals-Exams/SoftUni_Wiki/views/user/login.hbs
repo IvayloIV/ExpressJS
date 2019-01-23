@@ -1,0 +1,12 @@
+<section>
+    <h2>Login</h2>
+    <div class="spacer">
+        <form action="/user/login" method="POST">
+            <label>Email:</label>
+            <input type="text" name="email" value="{{user.email}}">
+            <label>Password:</label>
+            <input type="password" name="password" value="{{user.password}}">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<section>
+    <h2>Search results for: "{{input}}"</h2>
+    <div class="spacer">
+        <ul>
+            {{#each articles}}
+            <li>
+                <a href="/article/details/{{_id}}">{{title}}</a>
+            </li>
+            {{else}}
+            <p>No results.</p>
+            {{/each}}
+        </ul>
+    </div>
+</section>

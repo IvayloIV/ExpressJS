@@ -1,0 +1,14 @@
+<section>
+    <h2>Register</h2>
+    <div class="spacer">
+        <form action="/user/register" method="POST">
+            <label>Email:</label>
+            <input type="text" name="email" value="{{user.email}}">
+            <label>Password:</label>
+            <input type="password" name="password" value="{{user.password}}">
+            <label>Repeat password:</label>
+            <input type="password" name="repeatedPassword" value="{{user.repeatedPassword}}">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</section>

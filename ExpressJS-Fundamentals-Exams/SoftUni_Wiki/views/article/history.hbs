@@ -1,0 +1,14 @@
+<section>
+    <h2>Astronomy</h2>
+    <div class="spacer">
+        <h3>Edit hostory</h3>
+        <ul>
+            {{#each edits}}
+                <li>
+                    <a href="/article/details/{{this.article._id}}">{{date}}‎</a> by
+                    <span class="author">{{author.email}}</span>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
