@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Lato, serif;
+  margin: 0;
+}
+
+main {
+  padding: 0 40px;
+  min-height: 80%;
+}
+
+.nav ul {
+  padding-left: 0;
+}
+
+.nav li {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 16px;
+}
+
+.nav li:first-of-type {
+  padding-left: 0;
+}
+
+.nav li a {
+  text-decoration-line: none;
+  padding:10px;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.align-right {
+  float: right
+}
+
+/**
+Feedback message.
+ */
+.message {
+  margin:0 40px;
+  border-radius: 5px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-size:25px;
+  margin-top: 1rem;
+}
+
+.error {
+  background: darkred;
+}
+.success {
+  background: darkgreen;
+}
+
+
+footer {
+  text-align: center;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.head-title {
+  margin-top: 0;
+  text-align: center;
+}
+
+/**
+Default wrapper
+ */
+.container {
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+}
+.wrapper {
+  position: relative;
+  border: 1px solid black;
+  box-sizing: border-box;
+  padding: 10px;
+  margin:10px;
+}
+/**
+Layout
+ */
+.inline {
+  display: inline-block;
+}
+.row {
+  display: block;
+}
+.small {
+  width: 20%;
+}
+.medium {
+  width: 33%;
+}
+.large {
+  width:100%;
+}
+
+
+.post-img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.cards {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.form {
+  width: 50%;
+}
+
+.center-form {
+  margin: 0 auto;
+}
+
+.form-group label {
+  font-size: 1.2em;
+  width: 30%;
+  display: inline-block;
+  text-align: end;
+  padding-right: 10px;
+  vertical-align: top;
+}
+
+.input-field {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+  font-size: inherit;
+}
+
+textarea.input-field {
+  padding: 10px;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.form-group {
+  padding: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  color: inherit;
+  display: inline-block;
+  text-decoration-line: none;
+  margin: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #2fa4e7;
+  border-color: #2fa4e7;
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: #73a839;
+  border-color: #73a839;
+}
+
+.btn-warning {
+  color: #ffffff;
+  background-color: #dd5600;
+  border-color: #dd5600;
+}
+
+.btn-danger {
+  color: #ffffff;
+  background-color: #c71c22;
+  border-color: #c71c22;
+}
+
+#likes {
+  color: darkgreen;
+}
+.wrapper::after {
+  clear:both;
+}
+
+.thread-message {
+  color: #ffffff;
+  border-radius:10px;
+  max-width:80%;
+  padding:10px;
+  margin:5px;
+  word-break: break-all;
+}
+.thread-message::after {
+  clear: both;
+  content: '';
+}
+.left {
+  float: left;
+  background-color: dimgray;
+}
+.right {
+  float: right;
+  background-color: deepskyblue;
+}
+.message-row {
+  margin: 10px 0;
+}
+.clear {
+  clear:both;
+}
+.chat-wrapper {
+  width:80%;
+  margin: auto;
+}
+#chat-form {
+  width:80%;
+}
+.message-img {
+  width:100%;
+}
+.liked {
+  color: gold;
+}
+
+textarea {
+    width:80%;
+}
+#message-wrapper {
+    width:400px;
+    height:400px;
+    padding:10px;
+    border:1px solid black;
+}
+.message-row {
+    clear:both;
+}
+
+.menu {
+  background-color: #2fa4e7;
+  margin: 0;
+  text-align: center;
+}
+
+.container.nav {
+  text-align: center;
+}
+
+.body {
+  padding-top: 2rem;
+}
+
+form span {
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+form label input {
+  width: 27%;
+  padding: 0.7%;
+  margin: 1%;
+  border: 2px solid #2fa4e7;
+  border-radius: 0.6rem;
+  outline: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 0.8% 4%;
+  font-size: 1rem;
+  background: aliceblue;
+  border: 2px solid #2fa4e7;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background: #2fa4e7;
+  color: white;
+}
+
+form h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.userWelcome {
+  text-decoration-line: none;
+  padding: 10px;
+  font-size: 18px;
+  color: rgb(239, 209, 180);
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  background-color: #a2b4f3;
+}
+
+tr a {
+  color: rgb(9, 13, 14);
+  font-size: 1.1rem;
+}
+
+.chat .messages {
+  width: 56%;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.messages div {
+  display: block;
+}
+
+.messages .own  {
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.own span {
+  background: #2fa4e7;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 1rem;
+  color: white;
+}
+
+.messages img {
+  width: 200px;
+  height: 200px;
+} 
+
+.messages .other {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.other span {
+  background: #64696b;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 1rem;
+  color: white;
+}
+
+i {
+  padding-left: 1rem;
+  font-size: 1.24rem;
+}
+
+.like i{
+  color: #00BCD4;
+}
+
+.dislike i {
+  color: #f77a77;
+}
+
+span.brown {
+  color: #FFC107;
+}
+
+.sendMessage {
+  padding: 2rem 0;
+}
+
+.sendMessage textarea {
+  width: 60%;
+  padding: 0.7%;
+  margin: 1%;
+  border: 2px solid #2fa4e7;
+  border-radius: 0.6rem;
+  outline: none;
+  font-size: 1.3rem;
+}
+
+.sendMessage span {
+  font-size: 1.4rem;
+}
+
+.sendMessage .blocked {
+  font-weight: 600;
+  font-size: 1.2rem;
+}

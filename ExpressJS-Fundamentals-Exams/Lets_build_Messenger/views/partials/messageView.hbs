@@ -1,0 +1,9 @@
+{{#if image}}
+    <img src="{{message}}" alt="image">
+{{else}}
+    {{#if link}}
+        <a href="{{message}}" target="_blank">{{message}}</a>
+    {{else}}
+        {{message}}
+    {{/if}}
+{{/if}}

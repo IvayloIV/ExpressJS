@@ -1,0 +1,33 @@
+<section class="chat">
+    <div class="messages">
+        {{#each messages}}
+            {{#if this.isOwner}}
+                <div class="own"><span {{#if isLiked}}class="brown"{{/if}}>{{> messageView}}</span></div>
+            {{else}}
+                <div class="other">
+                    <span {{#if isLiked}}class="brown"{{/if}}>{{> messageView}}
+                    {{#if isLiked}}
+                        <a href="/message/dislike/{{threadId}}/{{_id}}" class="dislike"><i class="far fa-thumbs-down"></i></a>
+                    {{else}}
+                        <a href="/message/like/{{threadId}}/{{_id}}" class="like"><i class="far fa-thumbs-up"></i></a>
+                    {{/if}}
+                    </span>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+    <div class="sendMessage">
+        {{#if isBlocked}}
+            <p class="blocked">You are blocked!</p>
+        {{else}}
+            <form action="/message/add" method="POST">
+                <label>
+                    <input type="text" style="display: none" value="{{threadId}}" name="threadId">
+                    <span>Message: </span>
+                    <textarea name="message" cols="30" rows="7">{{messageText}}</textarea>
+                </label>
+                <input type="submit" value="Send">
+            </form>
+        {{/if}}
+    </div>
+</section>

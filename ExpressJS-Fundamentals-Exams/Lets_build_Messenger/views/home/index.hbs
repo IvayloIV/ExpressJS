@@ -1,0 +1,31 @@
+<h1>Welcome to Messenger</h1>
+
+{{#if currentUser}}
+    <form action="/thread/find" method="post">
+        <label>
+            <span>Search:</span>
+            <input name="username" placeholder="username" />
+        </label>
+        <input type="submit" value="Search" />
+    </form>
+
+    <h3>Chats:</h3>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Status</th>
+        </tr>
+        {{#each threads}}
+        <tr>
+            <td><a href="/thread/find/{{_id}}">{{this.connectedThread.userCreator.username}}</a></td>
+            {{#if this.connectedThread.isBlock}}
+                <td><a href="/thread/unblock/{{this.connectedThread._id}}">Unblock</a></td>
+            {{else}}
+                <td><a href="/thread/block/{{this.connectedThread._id}}">Block</a></td>
+            {{/if}}
+        </tr>
+        {{else}}
+            <p>No available chats!</p>
+        {{/each}}
+    </table>
+{{/if}}
