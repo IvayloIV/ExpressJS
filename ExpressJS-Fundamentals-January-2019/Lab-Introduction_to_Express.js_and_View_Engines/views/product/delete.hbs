@@ -1,0 +1,21 @@
+<form class="form center-form" method="post" enctype="multipart/form-data">
+	<h2>Delete Product</h2>
+	<div class="form-group">
+		<label class="product-card"></label>
+		<img class="product-img" src="{{product.image}}">
+	</div>
+
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input id="name" name="name" type="text" class="input-field" value="{{product.name}}" disabled />
+	</div>
+
+	<div class="form-group">
+		<label for="description">Description</label>
+		<textarea id="description" name="description" type="text" class="input-field" disabled>{{product.description}}</textarea>
+	</div>
+
+	<div class="form-group">
+		<input class="btn btn-danger form-btn" type="submit" class="btn" value="Delete">
+	</div>
+</form>
