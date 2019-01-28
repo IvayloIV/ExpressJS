@@ -1,0 +1,41 @@
+<section class="ticket-area">
+    <div class="ticket-area-left">
+        <img src="{{flight.imageUrl}}" alt="imageUrl">
+    </div>
+    <div class="ticket-area-right">
+        <h3>{{flight.destination}}</h3>
+        <div>from {{flight.origin}}</div>
+        <div class="data-and-time">{{flight.currentDate}} {{flight.departureTime}}
+            {{#if isAdmin}}
+            <a href="/flight/edit/{{flight._id}}" class="edit-flight-detail"></a>
+            {{/if}}
+        </div>
+        {{#unless flight.isPublic}}
+        <button><a href="/flight/public/{{flight._id}}" style="color:black">Publish Flight</a></button>
+        {{/unless}}
+    </div>
+</section>
+{{#if isAdmin}}
+<section class="seat-info">
+    <form action="/seat/create/{{flight._id}}" method="POST" class="seat-form">
+        <input type="text" placeholder="Price" name="price" value="{{seat.price}}">
+        <input type="text" placeholder="Type" name="type" value="{{seat.type}}">
+        <input type="number" name="quantity" min="1" max="999" placeholder="Tickets Counter" value="{{seat.quantity}}">
+        <input type="submit" class="create-seat" value="Create Seat">
+    </form>
+</section>
+{{/if}}
+{{#each seats}}
+<section class="flight-details">
+    <form action="/seat/buy/{{_id}}/{{flight}}" method="POST" class="seat-form">
+        <span>{{price}}$</span><span>{{type}}</span>
+        <input type="text" placeholder="Add Number" name="seatsCount">
+        <input type="submit" class="create-seat" value="Add to Cart">
+        {{#if isAdmin}}
+        <a href="/seat/remove/{{_id}}" class="delete">X</a>
+        {{/if}}
+    </form>
+</section>
+{{else}}
+<p>No seats available!</p>
+{{/each}}

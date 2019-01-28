@@ -1,0 +1,21 @@
+<nav>
+    <div class="left-container">
+        <ul>
+            <li><a href="/">Flights</a></li>
+            {{#if currentUser}}
+            <li><a href="/flight/my">My Tickets</a></li>
+            {{/if}}
+            {{#unless currentUser}}
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/register">Register</a></li>
+            {{/unless}}
+        </ul>
+    </div>
+    {{#if currentUser}}
+    <div class="right-container">
+        <span>Welcome, {{currentUser.name}} |</span>
+        <a href="/user/logout" class="log-out">Logout</a>
+        <a href="/cart/items"><img src="/static/img/cart.png" alt="image-cart" class="cart"></a>
+    </div>
+    {{/if}}
+</nav>

@@ -1,0 +1,16 @@
+<h2>Edit flight</h2>
+<form action="/flight/edit/{{flight._id}}" method="POST">
+    <label>Destination:</label>
+    <input type="text" placeholder="Destination" name="destination" value="{{flight.destination}}">
+    <label>Origin:</label>
+    <input type="text" placeholder="Origin" name="origin" value="{{flight.origin}}">
+    <label>Date:</label>
+    <input type="date" name="currentDate" value="{{flight.currentDate}}">
+    <label>Time:</label>
+    <input type="time" name="departureTime" value="{{flight.departureTime}}">
+    <label>Image:</label>
+    <input type="text"name="imageUrl" value="{{flight.imageUrl}}">
+    <label>Public:</label>
+    <input type="checkbox" name="isPublic" {{#if flight.isPublic}}checked{{/if}}>
+    <input type="submit" class="save-changes" value="Save Changes">
+</form>

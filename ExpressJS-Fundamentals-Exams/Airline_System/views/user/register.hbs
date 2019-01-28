@@ -1,0 +1,13 @@
+<h2>Create your accout:</h2>
+<form action="/user/register" method="POST">
+    <label>Name:</label>
+    <input type="text" placeholder="Name" name="name" value="{{user.name}}">
+    <label>Email:</label>
+    <input type="email" placeholder="Email" name="email" value="{{user.email}}">
+    <label>Password:</label>
+    <input type="password" placeholder="Password" name="password" value="{{user.password}}">
+    <label>Repeat Password:</label>
+    <input type="password" placeholder="Repeat Password" name="repeatedPassword" value="{{user.repeatedPassword}}">
+
+    <input type="submit" class="register" value="Register">
+</form>

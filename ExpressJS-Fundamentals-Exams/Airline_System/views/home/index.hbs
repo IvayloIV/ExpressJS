@@ -1,0 +1,25 @@
+{{#if isAdmin}}
+<form action="/flight/search" method="POST" class="catalog-form">
+    <label>Destination:</label>
+    <input type="text" placeholder="Destination" name="destination">
+    <label>Origin:</label>
+    <input type="text" placeholder="Origin" name="origin">
+    <label>Departure:</label>
+    <input type="date" placeholder="Departure Date" name="departureDate">
+    <input type="submit" class="search" value="Search">
+
+    <a href="/flight/create" class="add-flight">Add Flight +</a>
+</form>
+{{/if}}
+
+<section class="added-flights">
+    {{#each flights}}
+    <a href="/flight/details/{{_id}}" class="added-flight">
+        <img src="{{imageUrl}}" alt="image" class="picture-added-flight">
+        <h3>{{destination}}</h3>
+        <span>from {{origin}}</span><span>{{currentDate}}</span>
+    </a>
+    {{else}}
+    <p>No available planes!</p>
+    {{/each}}
+</section>

@@ -1,0 +1,9 @@
+<h2>Log In:</h2>
+<form action="/user/login" method="POST">
+    <label>Email:</label>
+    <input type="text" placeholder="Enter your Email" name="email" value="{{user.email}}">
+    <label>Password:</label>
+    <input type="password" placeholder="Enter your Password" name="password" value="{{user.password}}">
+
+    <input type="submit" class="login" value="Login">
+</form>

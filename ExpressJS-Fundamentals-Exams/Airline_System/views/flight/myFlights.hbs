@@ -1,0 +1,20 @@
+<h3>Your Flights</h3>
+{{#each items}}
+<section class="purchased-ticket">
+    <div class="purchased-left">
+        <img src="{{flight.imageUrl}}" alt="image">
+    </div>
+    <div class="purchased-right">
+        <div>
+            <h3>{{flight.destination}}</h3><span>{{flight.currentDate}}</span>
+        </div>
+        <div>
+            from {{flight.origin}} <span>{{flight.departureTime}}</span>
+        </div>
+        <p>{{seatsCount}} x {{seat.price}}$({{seat.type}}) </p>
+    </div>
+
+</section>
+{{else}}
+<a href="/" style="color: black"><p>Go and buy new flight!</p></a>
+{{/each}}

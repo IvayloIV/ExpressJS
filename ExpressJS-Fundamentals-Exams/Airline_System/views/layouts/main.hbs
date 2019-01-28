@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    {{> nav}}
+    <main>
+        {{#if message}}
+        {{message}}
+        {{/if}}
+        {{{body}}}
+        {{> footer}}
+    </main>
+</body>
+
+</html>
