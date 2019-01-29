@@ -1,0 +1,37 @@
+<form class="form center-form" action="/user/register" method="POST">
+    <h2>Register User</h2>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="input-field" name="username" value="{{user.username}}">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="input-field" name="password">
+    </div>
+    <div class="form-group">
+        <label for="confirmedPassword">Confirm Password</label>
+        <input type="password" id="confirmedPassword" class="input-field" name="confirmedPassword">
+    </div>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" class="input-field" name="firstName" value="{{user.firstName}}">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" class="input-field" name="lastName" value="{{user.lastName}}">
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" class="input-field" name="age" value="{{user.age}}">
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" class="input-field">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input class="form-btn btn" type="submit" value="Register">
+    </div>
+</form>
