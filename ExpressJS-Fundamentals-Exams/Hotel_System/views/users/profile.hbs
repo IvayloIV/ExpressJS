@@ -1,0 +1,31 @@
+<h2>My profile</h2>
+
+<div>
+    <h4>Created Hotels: </h4>
+    {{#each hotels}}
+    <a href="/hotel/details/{{this._id}}">
+        <fieldset>
+        <legend>{{this.title}}</legend>
+        <p>{{this.location}}</p>
+        <img class="hotelImg" src="{{this.imageUrl}}" alt="hotel image">
+        <p>{{this.description}}</p>
+    </fieldset>
+    </a>
+    {{else}}
+    <a href="/addHotel">Go and create your first hotel.</a>
+    {{/each}}
+</div>
+<div>
+    <h4>Created Comments: </h4>
+    {{#each comments}}
+    <fieldset>
+        <legend>
+            <p>{{this.title}}</p>
+        </legend>
+        <p>{{this.message}}</p>
+        <p>{{this.date}}</p>
+    </fieldset>
+    {{else}}
+    <p>You are not having a comments!</p>
+    {{/each}}
+</div>

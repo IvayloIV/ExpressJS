@@ -1,0 +1,11 @@
+<div class="login-page">
+    <div class="form">
+        <form action="/comment/edit/{{comment._id}}" method="POST" class="create-form">
+            <input type="text" name='title' placeholder="Title" value="{{comment.title}}" />
+            <br>
+            <textarea name="message" cols="35" rows="10" placeholder="message">{{comment.message}}</textarea>
+            <br>
+            <button type="submit">Edit</button>
+        </form>
+    </div>
+</div>

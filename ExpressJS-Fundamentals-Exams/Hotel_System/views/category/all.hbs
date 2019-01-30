@@ -1,0 +1,11 @@
+<section>
+    <h3>All categories:</h3>
+    {{#each categories}}
+    <div>
+        <a href="/category/list/{{_id}}">{{name}}</a>
+        <a href="/category/remove/{{_id}}"><button>Remove</button></a>
+    </div>
+    {{else}}
+    <p>Empty</p>
+    {{/each}}
+</section>

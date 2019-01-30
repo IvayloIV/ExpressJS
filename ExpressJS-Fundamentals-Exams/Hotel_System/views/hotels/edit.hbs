@@ -1,0 +1,21 @@
+<div class="login-page">
+	<div class="form">
+		<form action="/hotel/edit/{{hotel._id}}" method="POST" class="create-form">
+			<input type="text" name='title' placeholder="Title" value="{{hotel.title}}" />
+			<input type="text" name='location' placeholder="Location" value="{{hotel.location}}" />
+			<input type="text" name='imageUrl' placeholder="Image Url" value="{{hotel.imageUrl}}" />
+
+			<select class='picker' name="category">
+				{{#each categories}}
+				<option value="{{_id}}" {{#if this.current}}selected{{/if}}>{{name}}</option>
+				{{/each}}
+			</select>
+			<br>
+			<br>
+			<textarea name="description" id="" cols="35" rows="10" placeholder="description">{{hotel.description}}</textarea>
+			<br>
+
+			<button type="submit">Edit</button>
+		</form>
+	</div>
+</div>

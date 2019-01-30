@@ -1,0 +1,25 @@
+<h1>List</h1>
+
+{{#each hotels}}
+<a href="/hotel/details/{{this._id}}">
+    <fieldset>
+        <legend>{{this.title}}</legend>
+        <p>{{this.location}}</p>
+        <img class="hotelImg" src="{{this.imageUrl}}" alt="hotel image">
+        <p>{{this.description}}</p>
+        <p>Views: {{this.viewsCount}}</p>
+        {{#if ../currentUser}}
+            {{#if this.isLiked}}
+            <button><a href="/hotel/dislike/{{this._id}}">Dislike</a></button>
+            {{else}}
+            <button><a href="/hotel/like/{{this._id}}">Like</a></button>
+            {{/if}}
+        {{/if}}
+        <a href="/category/list/{{category}}"><button>View by category</button></a>
+        {{#if ../isAdmin}}
+        <button><a href="/hotel/edit/{{this._id}}">Edit</a></button>
+        <button><a href="/hotel/remove/{{this._id}}">Delete</a></button>
+        {{/if}}
+    </fieldset>
+</a>
+{{/each}}

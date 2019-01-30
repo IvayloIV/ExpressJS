@@ -1,0 +1,26 @@
+<header>
+    <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        {{#if currentUser}}
+        <li><a href="/addHotel">Generate Hotel</a></li>
+        <li><a href="/user/profile">My profile</a></li>
+        {{/if}}
+        <li><a href="/list/1">List</a></li>
+        {{#if isAdmin}}
+        <li><a href="/user/all">Create new Admin</a></li>
+        <li><a href="/category/add">Add Categories</a></li>
+        <li><a href="/category/all">All Categories</a></li>
+        {{/if}}
+        {{#if currentUser}}
+        <li>{{currentUser.username}}</li>
+        <li>
+            <form id="logout-form" action="/user/logout" method="post"></form>
+            <a href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+        </li>
+        {{else}}
+        <li><a href="/loginRegister">Login/Register</a></li>
+
+        {{/if}}
+    </ul>
+</header>

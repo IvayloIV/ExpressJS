@@ -1,0 +1,14 @@
+<section>
+    <h2>Users: </h2>
+    {{#each users}}
+    <p>{{username}} ({{firstName}} {{lastName}})</p>
+    <button><a href="/user/add/{{_id}}">Create {{username}} Admin</a></button>
+    {{#if isBlocked}}
+    <button><a href="/user/unblock/{{_id}}">Unblock</a></button>
+    {{else}}
+    <button><a href="/user/block/{{_id}}">Block</a></button>
+    {{/if}}
+    {{else}}
+    <p>No available users!</p>
+    {{/each}}
+</section>
