@@ -1,0 +1,22 @@
+<header>
+    <span class="logo">Twitter</span>
+
+    {{#if currentUser}}
+        <span class="greeting">Welcome, {{currentUser.username}}! | <a href="/user/logout">[logout]</a></span>
+    {{/if}}
+
+    <ul class="menu">
+        <li><a class="button" href="/">Home</a></li>
+        {{#if currentUser}}
+            <li><a class="button" href="/tweet/create">Create tweet</a></li>
+            <li><a class="button" href="/tweet/myProfile">My tweets</a></li>
+            {{#if isAdmin}}
+                <li><a class="button" href="/user/all">View all users</a></li>
+                <li><a class="button" href="/admin/all">View all admins</a></li>
+            {{/if}}
+        {{else}}
+            <li><a class="button" href="/user/login">Login</a></li>
+            <li><a class="button" href="/user/register">Register</a></li>
+        {{/if}}
+    </ul>
+</header>

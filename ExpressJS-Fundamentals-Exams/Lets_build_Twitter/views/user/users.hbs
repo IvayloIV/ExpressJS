@@ -1,0 +1,6 @@
+<h4>Normal users: </h4>
+{{#each users}}
+<p>{{this.username}} <a href="/user/admin/{{this._id}}"><button>Create it admin</button></a></p>
+{{else}}
+<p>Not available users!</p>
+{{/each}}

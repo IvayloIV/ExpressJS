@@ -1,0 +1,25 @@
+<hr>
+<p>Message: {{tweet.message}}</p>
+Tags:
+    {{#each tweet.tags}}
+        <p><i class="fas fa-arrow-right"></i><a href="/tag/{{this}}">{{this}}</a></p>
+    {{else}}
+    <p>No available tags.</p>
+    {{/each}}
+<p>Date: {{tweet.date}}</p>
+<p>Views: {{tweet.viewsCount}}</p>
+<span>Likes: {{tweet.likesCount}}</span>
+{{#if currentUser}}
+    {{#if tweet.isLiked}}
+    <a href="/tweet/dislike/{{tweet._id}}"><i class="fas fa-thumbs-down"></i></a>
+    {{else}}
+    <a href="/tweet/like/{{tweet._id}}"><i class="fas fa-thumbs-up"></i></a>
+    {{/if}}
+{{/if}}
+{{#if isAdmin}}
+<div>
+    <a href="/tweet/edit/{{tweet._id}}"><button>Edit</button></a>
+    <a href="/tweet/delete/{{tweet._id}}"><button>Delete</button></a>
+</div>
+{{/if}}
+<hr>

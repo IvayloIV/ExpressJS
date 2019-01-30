@@ -1,0 +1,6 @@
+<h2>Edit tweet:</h2>
+<form action="/tweet/edit/{{tweet._id}}" method="POST">
+    <p>Message:</p>
+    <textarea name="message" cols="35" rows="7">{{tweet.message}}</textarea>
+    <input type="submit" value="Edit">
+</form>
