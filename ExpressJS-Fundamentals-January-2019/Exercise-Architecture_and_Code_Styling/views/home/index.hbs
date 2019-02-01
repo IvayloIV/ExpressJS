@@ -1,0 +1,32 @@
+<div class="container body-content">
+    <div class="row">
+        {{#each articles}}
+        <div class="col-md-6">
+            <article>
+                <header>
+                    <h2>{{title}}</h2>
+                </header>
+
+                <p>{{content}}
+                </p>
+
+                <small class="author">
+                    {{author.fullName}}
+                </small>
+
+                <footer>
+                    <div class="pull-right">
+                        {{#if rules}}
+                        <a class="btn btn-success btn-xs" href="/article/edit/{{_id}}">Edit &raquo;</a>
+                        <a class="btn btn-danger btn-xs" href="/article/delete/{{_id}}">Delete &raquo;</a>
+                        {{/if}}
+                        <a class="btn btn-default btn-xs" href="/article/details/{{_id}}">Read more &raquo;</a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+        {{else}}
+        <p>No available articles!</p>
+        {{/each}}
+    </div>
+</div>
