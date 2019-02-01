@@ -12,6 +12,7 @@
 8. [**Exercise - Introduction to Express.js and View Engines**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-January-2019/Exercise-Introduction_to_Express.js_and_View_Engines)
 9. [**Lab - Session and Authentication**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-January-2019/Lab-Session_and_Authentication)
 10. [**Exercise - Session and Authentication**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-January-2019/Exercise-Session_and_Authentication)
+11. [**Exercise - Architecture and Code Styling**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-January-2019/Exercise-Architecture_and_Code_Styling)
 
 ## <b>ExpressJS Fundamentals - May 2018</b>
 1. [**Lab - Introduction to HTTP and Node.js**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-May-2018/Lab-Introduction_to_HTTP_and_Node.js)
