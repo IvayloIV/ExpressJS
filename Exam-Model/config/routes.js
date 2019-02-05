@@ -11,7 +11,7 @@ module.exports = app => {
     app.get('/user/login', restrictedPages.isAnonymous, controllers.user.loginGet);
     app.post('/user/login', restrictedPages.isAnonymous, controllers.user.loginPost);
     
-    app.get('/user/logout', restrictedPages.isAuthenticated, controllers.user.logout);
+    app.get('/user/logout', restrictedPages.isAuthed, controllers.user.logout);
 
     app.all('*', (req, res) => {
         res.status(404);
