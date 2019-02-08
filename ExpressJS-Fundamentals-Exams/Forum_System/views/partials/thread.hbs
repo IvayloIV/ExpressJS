@@ -1,0 +1,12 @@
+<a href="/thread/details/{{thread._id}}">
+    <div class="thread">
+        <p><span>Title: </span>{{thread.title}}</p>
+        <p><span>Description: </span>{{thread.description}}</p>
+        <p><span>Views: </span>{{thread.views}}</p>
+        <button><a href="/thread/category/{{thread.category}}">View by Category</a></button>
+        {{#if isAdmin}}
+        <button><a href="/thread/edit/{{thread._id}}">Edit</a></button>
+        <button><a href="/thread/delete/{{thread._id}}">Delete</a></button>
+        {{/if}}
+    </div>
+</a>

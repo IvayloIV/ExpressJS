@@ -1,0 +1,21 @@
+<form action="/thread/create" method="POST">
+    <label>
+        <span>Title: </span>
+        <input type="text" name="title" value="{{thread.title}}">
+    </label>
+    <br/>
+    <br/>
+    <label>
+        <span>Description: </span>
+        <input name="description" value="{{thread.description}}">
+    </label>
+    <br/>
+        <span>Category: </span>
+        <select name="category">
+            {{#each categories}}
+                <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+        </select>
+    <br>
+    <input class="button" type="submit" value="Create">
+</form>

@@ -1,0 +1,15 @@
+<h2>Normal Users:</h2>
+
+{{#each normalUsers}}
+<a href="/user/posts/{{username}}">
+    <p>{{username}}</p>
+</a>
+<a href="/user/create/admin/{{_id}}"><button>Create Admin</button></a>
+    {{#if isBlocked}}
+    <a href="/user/unblock/{{_id}}"><button>Unblock</button></a>
+    {{else}}
+    <a href="/user/block/{{_id}}"><button>Block</button></a>
+    {{/if}}
+{{else}}
+<p>No available users.</p>
+{{/each}}

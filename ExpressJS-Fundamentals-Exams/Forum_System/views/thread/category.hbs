@@ -1,0 +1,7 @@
+<h3>Thread by category: '{{name}}'</h3>
+
+{{#each threads}}
+    {{> thread thread=this isAdmin=../isAdmin }}
+{{else}}
+<p>No available threads.</p>
+{{/each}}

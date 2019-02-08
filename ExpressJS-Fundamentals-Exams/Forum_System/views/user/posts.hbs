@@ -1,0 +1,19 @@
+<h2>User '{{name}}'</h2>
+
+<div>
+    <h2>Threads: </h2>
+    {{#each threads}}
+        {{> thread thread=this isAdmin=../isAdmin }}
+    {{else}}
+    <p>No available threads!</p>
+    {{/each}}
+</div>
+
+<div>
+    <h2>Answers: </h2>
+    {{#each answers}}
+        {{> answer answer=this isAdmin=../isAdmin }}
+    {{else}}
+    <p>No available answers!</p>
+    {{/each}}
+</div>

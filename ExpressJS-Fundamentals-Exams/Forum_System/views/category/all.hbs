@@ -1,0 +1,10 @@
+<div>
+    <h2>All categories</h2>
+    <ul>
+        {{#each categories}}
+        <li>{{name}} <a href="/category/delete/{{_id}}"><button>Delete</button></a></li>
+        {{else}}
+        <p>No available categories!</p>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,39 @@
+<div class="thread">
+    <p><span>Title: </span>{{thread.title}}</p>
+    <p><span>Description: </span>{{thread.description}}</p>
+    <p><span>Views: </span>{{thread.views}}</p>
+    <p><span>Likes: </span>{{thread.likesCount}}</p>
+    {{#if currentUser}}
+        {{#if isLiked}}
+            <button><a href="/thread/unlike/{{thread._id}}">Unlike</a></button>
+        {{else}}
+            <button><a href="/thread/like/{{thread._id}}">Like</a></button>
+        {{/if}}
+    {{/if}}
+        <button><a href="/thread/category/{{thread.category}}">View by Category</a></button>
+    {{#if isAdmin}}
+        <button><a href="/thread/edit/{{thread._id}}">Edit</a></button>
+        <button><a href="/thread/delete/{{thread._id}}">Delete</a></button>
+    {{/if}}
+</div>
+
+{{#if currentUser}}
+    {{#if isBlocked}}
+    <p>You are blocked</p>
+    {{else}}
+    <form action="/answer/create/{{thread._id}}" method="POST">
+        <p>Create answer: </p>
+        <textarea name="message" cols="30" rows="7"></textarea>
+        <input type="submit" value="Create">
+    </form>
+    {{/if}}
+{{else}}
+<a href="/user/login"><h4>Login to create answer.</h4></a>
+{{/if}}
+
+<br>
+{{#each answers}}
+    {{> answer answer=this isAdmin=../isAdmin }}
+{{else}}
+<p>No available answers!</p>
+{{/each}}

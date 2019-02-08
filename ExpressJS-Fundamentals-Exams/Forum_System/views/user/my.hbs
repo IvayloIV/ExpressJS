@@ -1,0 +1,17 @@
+<div>
+    <h2>My threads: </h2>
+    {{#each threads}}
+        {{> thread thread=this isAdmin=../isAdmin }}
+    {{else}}
+    <p>No available threads!</p>
+    {{/each}}
+</div>
+
+<div>
+    <h2>My answers: </h2>
+    {{#each answers}}
+        {{> answer answer=this isAdmin=../isAdmin }}
+    {{else}}
+    <p>No available answers!</p>
+    {{/each}}
+</div>

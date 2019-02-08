@@ -1,0 +1,6 @@
+<p>Message: {{answer.message}}</p>
+<p>{{answer.creationDate}}</p>
+{{#if isAdmin}}
+<a href="/answer/delete/{{answer._id}}"><button>Remove</button></a>
+{{/if}}
+<br>

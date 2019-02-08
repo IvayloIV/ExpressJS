@@ -1,0 +1,9 @@
+<h1>Welcome to Forum System!</h1>
+
+{{#each threads}}
+<div>
+    {{> thread thread=this isAdmin=../isAdmin }}
+</div>
+{{else}}
+<p>No available threads.</p>
+{{/each}}
