@@ -5,8 +5,8 @@ const User = require('../models/User');
 
 module.exports = config => {
     mongoose.connect(config.dbPath, {
-        useMongoClient: true
-    });       
+        useNewUrlParser: true
+    });      
     const db = mongoose.connection;
     db.once('open', err => {
         if (err) throw err;
