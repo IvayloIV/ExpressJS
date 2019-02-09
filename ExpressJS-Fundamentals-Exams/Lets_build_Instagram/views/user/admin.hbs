@@ -1,0 +1,7 @@
+<p>Admins: </p>
+<br>
+{{#each admins}}
+<a href="/user/profile/{{username}}"><p>{{username}}</p></a>
+{{else}}
+<p>No available admins!</p>
+{{/each}}

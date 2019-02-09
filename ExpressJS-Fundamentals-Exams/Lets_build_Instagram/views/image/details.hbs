@@ -1,0 +1,32 @@
+<div class="image-home">
+    <img src="{{image.imageUrl}}" alt="image" width="300px" height="250px">
+    <p>{{image.description}}</p>
+    <br>    
+    <div>
+        Tags:
+        <br>
+        <ul>
+            {{#each image.tags}}
+                <li><a href="/image/tag/{{this}}">{{this}}</a></li>
+                {{else}}
+                Tags missing.
+            {{/each}}
+        </ul>
+    </div>
+    <br>
+    <p>Views: {{image.viewCount}}</p>
+    <p>Likes: {{image.likesCount}}</p>
+    {{#if currentUser}}
+        {{#if image.isLiked}}
+            <a href="/image/dislike/{{image._id}}"><button>Dislike</button></a>
+        {{else}}
+            <a href="/image/like/{{image._id}}"><button>Like</button></a>
+        {{/if}}
+    {{/if}}
+    <br>
+    <br>
+    {{#if isAdmin}}
+        <a href="/image/edit/{{image._id}}"><button>Edit</button></a>
+        <a href="/image/delete/{{image._id}}"><button>Delete</button></a>
+    {{/if}}
+</div>

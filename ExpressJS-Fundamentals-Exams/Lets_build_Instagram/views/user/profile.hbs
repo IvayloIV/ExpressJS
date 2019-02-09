@@ -1,0 +1,7 @@
+<h2>By username '{{username}}': </h2>
+<br>
+{{#each images}}
+    {{> image image=this isAdmin=../isAdmin }}
+    {{else}}
+<p>Images missing.</p>
+{{/each}}

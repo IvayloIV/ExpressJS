@@ -1,0 +1,15 @@
+<form action="/image/edit/{{image._id}}" method="POST">
+    <label>
+        <span>ImageUrl: </span>
+        <input type="text" name="imageUrl" value={{image.imageUrl}}>
+    </label>
+    <br>
+    <br>
+    <label>
+        <span>Description: </span>
+        <textarea name="description" cols="30" rows="3">{{image.description}}</textarea>
+    </label>
+    <br>
+    <br>
+    <input type="submit" value="Edit">
+</form>

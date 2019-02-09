@@ -1,0 +1,12 @@
+<h1>Welcome to Instagram!</h1>
+
+<form action="/image/search">
+    <input type="text" placeholder="Search by description..." name="description" value={{description}}>
+    <input type="submit">
+</form>
+
+{{#each images}}
+    {{> image image=this isAdmin=../isAdmin }}
+    {{else}}
+<p>Images missing.</p>
+{{/each}}

@@ -1,0 +1,8 @@
+<p>Normal users: </p>
+<br>
+{{#each users}}
+<a href="/user/profile/{{username}}"><p>{{username}}</p></a>
+<a href="/user/create/admin/{{_id}}"><button>Create admin</button></a>
+{{else}}
+<p>No available users!</p>
+{{/each}}

@@ -1,0 +1,5 @@
+<h2>By tag name '{{name}}': </h2>
+<br>
+{{#each images}}
+    {{> image image=this isAdmin=../isAdmin }}
+{{/each}}
