@@ -1,0 +1,21 @@
+<h1>Teams</h1>
+{{#if isAdmin}}
+<h3>Manage Users</h3>
+<div class="form">
+    <form action="/team/manage" method="POST">
+        <label>User</label>
+        <select name="userId">
+            {{#each users}}
+            <option value="{{_id}}">{{username}}</option>
+            {{/each}}
+        </select>
+        <label>Team</label>
+        <select name="teamId">
+            {{#each teams}}
+            <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Distribute">
+    </form>
+</div>
+{{/if}}

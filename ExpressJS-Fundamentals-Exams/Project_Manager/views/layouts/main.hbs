@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projects Manager</title>
+    <link href="/static/css/site.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    {{> header}}
+    {{#if message}}
+        <div class="message-my">{{message}}</div>
+    {{/if}}
+    <main>
+        {{{body}}}
+    </main>
+    {{> footer}}
+</body>
+
+</html>

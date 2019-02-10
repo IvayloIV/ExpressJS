@@ -1,0 +1,21 @@
+<h1>Register</h1>
+<div class="form">
+    <form action="/user/register" method="POST">
+        <label for="name">Username:</label>
+        <input type="text" name="username" value="{{user.username}}"><br>
+
+        <label for="name">Password:</label>
+        <input type="password" name="password"><br>
+
+        <label for="name">First name:</label>
+        <input type="text" name="firstName" value="{{user.firstName}}"><br>
+
+        <label for="name">Last name:</label>
+        <input type="text" name="lastName" value="{{user.lastName}}"><br>
+
+        <label for="name">Profile Picture:</label>
+        <input type="text" name="profilePicture" value="{{user.profilePicture}}"><br>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
