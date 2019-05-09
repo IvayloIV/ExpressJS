@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Video Tutorials</h1>
+        <p class="lead">Start Self-Study Today: It'll Change Your Life</p>
+    </div>
+</div>
+
+<div>
+    <h1 class="text-center">Top Courses</h1>
+    <div class="container mt-3">
+        <div class="row d-flex justify-content-center">
+
+            <div class="card-deck">
+
+                {{#each courses}}
+                    <div class="card mb-4">
+                        <img class="card-img-top"
+                            src="{{this.imageUrl}}"
+                            alt="Card image cap" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">{{this.title}}</h4>
+                            <p class="card-text">{{this.description}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+</div>

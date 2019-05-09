@@ -1,0 +1,28 @@
+<h1 class="text-center">Courses</h1>
+
+<form class="search" method="GET" action="/home/user">
+    <label>Search: </label>
+    <input type="text" name="search" value="{{search}}">
+    <input type="submit" value="Search">
+</form>
+
+<div class="container mt-3">
+    <div class="row ">
+        <div class="card-deck d-flex justify-content-center">
+            {{#each courses}}
+                <div class="card mb-4">
+                    <img class="card-img-top"
+                        src="{{this.imageUrl}}"
+                        alt="Card image cap" width="400">
+                    <div class="card-body">
+                        <h4 class="card-title">{{this.title}}</h4>
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/course/details/{{this._id}}"><button type="button" class="btn btn-info">Details</button></a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

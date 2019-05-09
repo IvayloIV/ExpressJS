@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col text-center">
+        <a href="/course/create"><button type="button" class="btn btn-primary btn-lg">Create Course</button></a>
+    </div>
+</div>
+
+<div class="border border-light p-5">
+    <h1 class="text-center">Choose Course</h1>
+    <ul class="list-group">
+
+        {{#each courses}}
+            <li class="list-group-item">
+                {{this.title}}
+                <div class="float-right">
+                    <div class="btn-group" role="group">
+                        <a href="/course/edit/{{this._id}}"><button type="button" class="btn btn-warning">Edit Course</button></a>
+                        <a href="/course/planer/{{this._id}}"><button type="button" class="btn btn-success">Add lectures</button></a>
+                    </div>
+                    Lectures in course
+                    <span class="badge badge-primary badge-pill">{{this.lectures.length}}</span>
+                </div>
+            </li>
+        {{else}}
+            <p>No courses in database. Please create one!</p>
+        {{/each}}
+    </ul>
+</div>
