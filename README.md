@@ -39,3 +39,4 @@
 8. [**Forum System**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/Forum_System)
 9. [**Let's build Instagram**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/Lets_build_Instagram)
 10. [**Project Manager**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/Project_Manager)
+11. [**Video Tutorials**](https://github.com/IvayloIV/ExpressJS/tree/master/ExpressJS-Fundamentals-Exams/Video_Tutorials)
